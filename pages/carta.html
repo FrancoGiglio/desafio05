@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Bootstrap</title>
+
+</head>
+
+
+
+<body>
+
+    <header class="container">
+
+        <!-- Barra de navegación -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <h1 class="navbar-brand__link--text">
+                        Navidad
+                    </h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./carta.html"> <!-- En esta página este es el enlace activo -->
+                                Carta
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./regalos.html">
+                                Regalos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">
+                                F.A.Q.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <!-- Formulario -->
+        <section class="formulario">
+            <h2>
+                Carta navideña
+            </h2>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6"> <!-- Puse el Nombre y el Apellido con 6 columnas del Grid de Bootstrap, antes tenía 4 porque tenía un campo para Usuario, pero lo eliminé -->
+                    <label for="validationCustom01" class="form-label">Nombre/s</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Escribe tu/s nombre/s" required>
+                    <div class="valid-feedback">
+                        ¡Se ve bien!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Apellido/s</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="Escribe tu/s apellido/s" required>
+                    <div class="valid-feedback">
+                        ¡Se ve bien!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">Localidad</label>
+                    <input type="text" class="form-control" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                        Por favor, escribe una localidad valida.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationCustom04" class="form-label">Provincia</label>
+                    <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">Elige...</option>
+                        <option>Buenos Aires</option>
+                        <option>Capital Federal</option>
+                        <option>Catamarca</option>
+                        <option>Chaco</option>
+                        <option>Chubut</option>
+                        <option>Córdoba</option>
+                        <option>Corrientes</option>
+                        <option>Entre Ríos</option>
+                        <option>Formosa</option>
+                        <option>Jujuy</option>
+                        <option>La Pampa</option>
+                        <option>La Rioja</option>
+                        <option>Mendoza</option>
+                        <option>Misiones</option>
+                        <option>Neuquén</option>
+                        <option>Río Negro</option>
+                        <option>Salta</option>
+                        <option>San Juan</option>
+                        <option>San Luis</option>
+                        <option>Santa Cruz</option>
+                        <option>Santa Fe</option>
+                        <option>Santiago del Estero</option>
+                        <option>Tierra del Fuego</option>
+                        <option>Tucumán</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor, selecciona una jurisdicción valida.
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="validationCustom05" class="form-label">C.P.</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Por favor, indica un código postal valido.
+                    </div>
+                </div>
+                <div class="mb-3"> <!-- Agregué el textarea que no estaba en el diseño original y saqué el checkbox porque le saca el espiritu navideño a una carta a Papá Noel -->
+                    <label for="exampleFormControlTextarea1" class="form-label">Escribele a Papá Noel</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-warning" type="submit">Enviar carta 📩</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p class="footer__text">
+            🎄🎅🏻 Felices fiestas a todos 🤶🏻🎄
+        </p>
+    </footer>
+
+
+    <!-- Popper y Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
